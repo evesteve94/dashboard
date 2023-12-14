@@ -1,7 +1,9 @@
 Welcome to my Dashboard created for for the course Advance Frontend Development at Chas Academy!
 
 This website is coded in 100% vanilla JS, HTML and CSS by Eva 'evesteve' Bjöling.
+
 Github accoount: evesteve94 (https://github.com/evesteve94)
+
 Netflify link: https://dashboard-evesteve.netlify.app/
 
 **Positives:**
