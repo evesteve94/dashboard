@@ -14,6 +14,7 @@ Netflify link: https://dashboard-evesteve.netlify.app/
 - The JS code is well commented (in Swedish)
 - Some (not all) requirements for Unplash API are met (see attributions to photographer at bottom of the page)
 - Many small things have been added to improve the user experience - such as: blur()for inputs when pressing enter/tab, the input field clearing after entry, the crusor changing to a pointer to show the user what is 'clickable'
+- The layout is fairly responsive and looks good on various screens.
 
 **To be fixed/ room for improvement: **
 - All cards have a fixed width in pixels - to ensure that the content is consistent. However, this makes the cards less responsive. It could look better on tablet screens.
