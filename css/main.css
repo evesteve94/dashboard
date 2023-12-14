@@ -363,6 +363,11 @@ main {
     color: white;
 }
 
+.random-image:hover {
+    transform: scale(1.05);
+    transition: 0.7s;
+}
+
 .custom-background {
     font-weight: 400;
     letter-spacing: 0.05rem;
@@ -374,6 +379,10 @@ main {
     border: none;
     border-radius: 0.5rem;
     color: black;
+}
+
+.user-image-input:focus {
+    transform: scale(1.1);
 }
 
 .update-logo{
