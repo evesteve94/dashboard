@@ -345,9 +345,9 @@ document.addEventListener('DOMContentLoaded', () => {
             weatherCard.innerHTML = '<h2>Geolocation not supported</h2>';
         }
     }
-    //händelse för locationInput när användaren trycker 'enter'
+    //händelse för locationInput när användaren trycker 'enter' eller 'tab'
     function handleEnterKey(event) {
-        if (event.key === 'Enter') {
+        if (event.key === 'Enter' || 'Tab') {
             updateWeather();
             locationInput.value = '';
             locationInput.blur();
