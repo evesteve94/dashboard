@@ -354,12 +354,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     //händelse för locationInput när användaren trycker 'enter'
     function handleEnterKey(event) {
-        if (event.key === 'Enter') {
+        if (event.keyCode === 13 || event.key === "Enter") {
             updateWeather();
             locationInput.value = '';
             locationInput.blur();
         }
     }
+    
 
     locationInput.addEventListener('keydown', handleEnterKey);
 
