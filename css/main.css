@@ -134,6 +134,11 @@ main {
     background-color: var(--white-color);
     border-radius: 0.5rem;
     padding: 1rem;
+    text-decoration: none;
+}
+
+.user-link-div:hover{
+    background-color: rgb(255, 255, 255);
 }
 
 .user-link{
@@ -145,9 +150,14 @@ main {
 .remove-link {
     border: none;
     background-color: var(--white-color);
-    /* color: black; */
     cursor: pointer;
     height: 1rem;
+    z-index: 500;
+}
+
+.remove-link:hover {
+    transform: scale(1.4) rotate(180deg);;
+    transition: 0.5s;
 }
 
 .add-link,

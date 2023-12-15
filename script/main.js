@@ -103,8 +103,10 @@ userTitle.addEventListener('keydown', function (event) {
         // undersöker att båda fält har innehåll
         if (linkValue && titleValue) {
             // skapar ny länk-div
-            const newLink = document.createElement('div');
+            const newLink = document.createElement('a');
             newLink.classList.add('user-link-div');
+            newLink.href = linkValue;
+            newLink.target = '_blank';
             newLink.innerHTML = `
                 <img src="./images/google-logo.png" class="link-logo"> 
                 <a class="user-link" href="${linkValue}" target="_blank">${titleValue}</a>
@@ -127,10 +129,11 @@ userTitle.addEventListener('keydown', function (event) {
 
             // lägger till händelser för remove-linkbtn
             const removeLinkButton = newLink.querySelector('.remove-link');
-            removeLinkButton.addEventListener('click', function () {
+            removeLinkButton.addEventListener('click', function (event) {
                 // tar bort länken från kortet
                 addedLinks.removeChild(newLink);
-
+                //ser till att länken raderas utan att öppnas först
+                event.preventDefault();
                 // tar bort från localStorage - anrop
                 removeLinkFromLocalStorage(linkValue, titleValue);
             });
@@ -167,8 +170,10 @@ userTitle.addEventListener('keydown', function (event) {
 
         //skapar div för varje länk
         storedLinks.forEach(linkData => {
-            const newLink = document.createElement('div');
+            const newLink = document.createElement('a');
             newLink.classList.add('user-link-div');
+            newLink.href = linkData.link;
+            newLink.target = '_blank';
             newLink.innerHTML = `
                 <img src="./images/google-logo.png" class="link-logo"> 
                 <a class="user-link" href="${linkData.link}" target="_blank">${linkData.title}</a>
@@ -180,9 +185,11 @@ userTitle.addEventListener('keydown', function (event) {
 
             // händelse till remove-link
             const removeLinkButton = newLink.querySelector('.remove-link');
-            removeLinkButton.addEventListener('click', function () {
+            removeLinkButton.addEventListener('click', function (event) {
                 // tar bort när knappen trycks
                 addedLinks.removeChild(newLink);
+                //ser till att länken raderas utan att öppnas först
+                event.preventDefault();
 
                 // tar bort från localStorage
                 removeLinkFromLocalStorage(linkData.link, linkData.title);
