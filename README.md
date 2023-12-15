@@ -16,6 +16,7 @@ Netflify link: https://dashboard-evesteve.netlify.app/
 - Some (not all) requirements for Unplash API are met (see attributions to photographer at bottom of the page)
 - Many small things have been added to improve the user experience - such as: blur()for inputs when pressing enter/tab, the input field clearing after entry, the crusor changing to a pointer to show the user what is 'clickable'
 - The layout is fairly responsive and looks good on various screens.
+- good/bad - my api keys (sensitive information) is in an ignored folder. You will have to use your own access keys to Unsplash and OpenweatherAPI to access all data properly.
 
 **To be fixed/ room for improvement**
 
