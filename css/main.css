@@ -34,6 +34,13 @@ main {
     padding: 1rem;
 }
 
+/* 
+T
+    I
+        T
+            L
+                E*/
+
 .title-card-div{
     display: flex;
     flex-direction: column;
@@ -60,8 +67,14 @@ main {
     color: gray;
 }
 
-.clock,
-.random-image {
+/* 
+C
+    L
+        O
+            C
+                K */
+
+.clock{
     width: 90%;
     background-color: var(--main-color);
     /* backdrop-filter: invert(80%); */
@@ -73,17 +86,18 @@ main {
     max-width: 300px;
 }
 
-.update-logo:hover {
-    transform: rotate(180deg);
-    transition: 0.7s;
-}
-
 .clock {
     /* font-weight: 900; */
     display: flex;
     justify-content: space-between;
     color: black;
 }
+/* 
+C
+    A
+        R
+            D
+                S */
 
 .card-container {
     width: 100%;
@@ -111,7 +125,6 @@ main {
     text-transform: uppercase;
 }
 
-/* link-card */
 .card-1,
 .card-2{
     display: flex;
@@ -120,12 +133,21 @@ main {
     align-items: center;
 }
 
+/*
+L
+    I
+        N
+            K
+                S */
+
+
 .added-links{
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
+
 /* varje länk div som skapas */
 .user-link-div{
     width: 100%;
@@ -162,8 +184,7 @@ main {
 }
 
 .add-link,
-.save-link,
-.location-input{
+.save-link{
     background-color: rgba(132, 132, 132, 0.61);
     padding: 0.5rem 2rem;
     border: none;
@@ -174,11 +195,6 @@ main {
     cursor: pointer;
     font-size: 1.1rem;
     font-weight: 400;
-}
-
-.location-input::placeholder {
-    color: var(--white-color);
-    text-align: center;
 }
 
 .add-link{
@@ -200,6 +216,15 @@ main {
 .card-2 .card-title {
     margin-bottom: 1rem;
 }
+
+/* 
+W
+    E
+        A
+            T
+                H
+                    E
+                        R */
 
 .weather-card,
 .background-div {
@@ -228,13 +253,24 @@ main {
     height: 3.5rem;
 }
 
-.location-input {
-    width: 82%;
-    padding: 0.5rem;
+.location-input{
+    width: 78%;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    background-color: rgba(132, 132, 132, 0.61);
+    padding: 0.5rem 2rem;
     border: none;
     border-radius: 0.5rem;
-    color: white;
-    margin-top: 1rem;
+    color: var(--white-color);
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.location-input::placeholder {
+    color: var(--white-color);
+    text-align: center;
 }
 
 .location-btn {
@@ -258,6 +294,14 @@ main {
     text-align: center;
 }
 
+/* 
+Q
+    U
+        O
+            T
+                E
+                    S */
+
 .quote-div {
     width: 100%;
     height: 80%;
@@ -280,6 +324,13 @@ main {
     text-align: end;
 }
 
+/* 
+N
+    O
+        T
+            E
+                S */
+
 .card-4 {
     display: flex;
     flex-direction: column;
@@ -301,7 +352,92 @@ main {
     border: none;
 }
 
-/* Modal för hidden/reveal */
+/* 
+B
+    A
+        C
+            K
+                G
+                    R
+                        O
+                            U
+                                N
+                                    D */
+
+.random-image {
+    width: 90%;
+    background-color: var(--main-color);
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    max-width: 300px;
+}
+
+
+.random-image,
+.custom-background{
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+}
+
+.random-image:hover {
+    transform: scale(1.05);
+    transition: 0.7s;
+}
+
+.custom-background {
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+}
+
+.user-image-input{
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: black;
+}
+
+.user-image-input:focus {
+    transform: scale(1.1);
+}
+
+.update-logo{
+    width: 2rem;
+}
+
+.update-logo:hover {
+    transform: rotate(180deg);
+    transition: 0.7s;
+}
+
+.image-url {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 0.5rem;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: underline;
+    color: black;
+}
+
+/* 
+M
+    O
+        D
+            A
+                L*/
 
 .hidden-modal{
     display: none;
@@ -374,69 +510,11 @@ main {
 }
 
 
-.random-image,
-.custom-background{
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    color: white;
-}
-
-.random-image:hover {
-    transform: scale(1.05);
-    transition: 0.7s;
-}
-
-.custom-background {
-    font-weight: 400;
-    letter-spacing: 0.05rem;
-}
-
-.user-image-input{
-    width: 100%;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 0.5rem;
-    color: black;
-}
-
-.user-image-input:focus {
-    transform: scale(1.1);
-}
-
-.update-logo{
-    width: 2rem;
-}
-
-.image-url {
-    /* position: fixed;
-    bottom: 0;
-    left: 0; */
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
-    padding: 0.5rem;
-    overflow: hidden;
-}
-
-a {
-    text-decoration: underline;
-    color: black;
-}
-
-/* tablet breakpoint */
-@media (min-width: 660px) {
-
-
-}
-
 /* desktop breakpoint */
 @media (min-width: 900px) {
-
+    .title{
+        font-size: 3.5rem;
+    }
 }
 
 /* extra large desktop breakpoint */
@@ -444,10 +522,5 @@ a {
     main {
         height: 100vh;
     }
-
-    .title{
-        font-size: 3.5rem;
-    }
-
 
 }
