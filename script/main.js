@@ -208,6 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
     //hämtar HTML element
     const weatherCard = document.getElementById('weather-card');
     const locationInput = document.getElementById('locationInput');
+    const locationButton = document.getElementById('location-btn');
     const weatherTitle = document.getElementById('weather-title');
     // hämtar dagens datum från Date objektet
     const today = new Date();
@@ -352,7 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
             weatherCard.innerHTML = '<h2>Geolocation not supported</h2>';
         }
     }
-    //händelse för locationInput när användaren trycker 'enter'
+    // händelse för locationInput när användaren trycker 'enter' eller reagerar på key 13 (enter)
     function handleEnterKey(event) {
         if (event.keyCode === 13 || event.key === "Enter") {
             updateWeather();
@@ -363,6 +364,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     locationInput.addEventListener('keydown', handleEnterKey);
+
+    //anpassat för mobilanvändning --> knapp som uppdaterar efter användarens input
+    locationButton.addEventListener('click', function(){
+        updateWeather();
+        locationInput.value = '';
+        locationInput.blur();
+    })
 
     //current location uppdaterar weatherCard när sidan laddas --> skapar innehåll från start
     getLocation();
