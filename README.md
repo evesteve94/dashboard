@@ -5,6 +5,7 @@ This website is coded in 100% vanilla JS, HTML and CSS by Eva 'evesteve' Bjölin
 Github accoount: evesteve94 (https://github.com/evesteve94)
 
 Netflify link: https://dashboard-evesteve-secret-keys.netlify.app/
+
 **Positives:**
 
 - The layout is nearly identical to the mockup design of the assignment: https://qlok.notion.site/Individuellt-projekt-The-Dashboard-808b39d4fca84cf08f7efedad153c9e7
