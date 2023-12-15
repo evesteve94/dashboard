@@ -436,6 +436,7 @@ function loadNotepadFromLocalStorage() {
 // 7. När användaren klickar på denna knapp ska en randomiserad bild från Unsplash API hämtas och läggas in som bakgrund på dashboarden.
 //hämtar knappen
 const randomImage = document.getElementById('random-image');
+const userImageInput = document.getElementById('user-image-input');
 
 //anropar funktion när knappen trycks
 randomImage.addEventListener('click', function(){
@@ -479,11 +480,12 @@ function fetchRandomImage(keyword) {
         });
 }
 
-document.getElementById('user-image-input').addEventListener('keypress', function (event) {
+userImageInput.addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {
         const keyword = this.value;
         fetchRandomImage(keyword);
         this.value = ''; // Clear the input after pressing Enter
+        userImageInput.blur();
     }
 });
 
