@@ -1,2 +1,2 @@
 # Ignore sensitive data files
-./data/secret.json
+secret.json
