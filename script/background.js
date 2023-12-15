@@ -11,10 +11,24 @@ document.addEventListener('DOMContentLoaded', () => {
         fetchRandomImage();
     });
 
+    async function getUnsplashKey(){
+        const response = await fetch('./data/secret.json');
+        if(response.ok){
+            const keys = await response.json();
+            const unsplashKey = keys[1].unsplashKey;
+            return unsplashKey;
+        } else {
+            console.log(`HTTP error message: ${response.status}`);
+        }
+    };
+
+
     //hämtar en slumpas bild baserat på ett keyword - eller när sidan laddas
-    function fetchRandomImage(keyword) {
+    async function fetchRandomImage(keyword) {
         //API nyckel + URL med sparat keyword som query
-        const accessKey = 'eoMgFXTBy9LPZhjnApA_Ec4ulny7fTHdwjUt4cu7XqE';
+
+        //hämtar hemlig nyckel tll unsplash
+        const accessKey = await getUnsplashKey();
         const apiUrl = `https://api.unsplash.com/photos/random?query=${keyword}&client_id=${accessKey}`;
 
         fetch(apiUrl)

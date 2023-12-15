@@ -23,10 +23,23 @@ document.addEventListener('DOMContentLoaded', () => {
     //sparar datumet i variabler 
     const dayAfterTomorrowName = daysOfWeek[dayAfterTomorrow.getDay()];
 
+    async function getWeatherKey(){
+        const response = await fetch('./data/secret.json');
+        if(response.ok){
+            const keys = await response.json();
+            const weatherKey = keys[0].weatherKey;
+            return weatherKey;
+        } else {
+            console.log(`HTTP error message: ${response.status}`);
+        }
+    };
+
     //hämtar lat + long från getLocation (geolocation) där functionen anropas
-    function getWeather(latitude, longitude) {
+    async function getWeather(latitude, longitude) {
         //lagrar nyckel + api url + 
-        const apiKey = 'c20077b887631a54b4b5e39131893591';
+        
+        //hämtar hemligt api key
+        const apiKey = await getWeatherKey();
         const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
         //hämtar från API
@@ -85,9 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function getWeatherByCity(city) {
+    async function getWeatherByCity(city) {
         //samma som getWether - med city som argument
-        const apiKey = 'c20077b887631a54b4b5e39131893591';
+
+        //hämtar hemlig API nyckel
+        const apiKey = await getWeatherKey();
         const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
         //updaterar titeln på kortet
         weatherTitle.textContent = `Weather in ${city.toUpperCase()}`
