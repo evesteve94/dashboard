@@ -29,3 +29,4 @@ Netflify link: https://dashboard-evesteve.netlify.app/
 - The Unplash API accesskey is limitted to (I think) 50 requests per hour. Not all requirements are met according to the documentation to apply for 'production level' use (5.000 requests/hour)
 - The getWeather() and getWeatherByCity() funtions could posibly be combined to limit amount of code.
 - There are a LIMITED NUMBER OF COMMITS becasue I only initialized a new repo after most of the Dashboard was done. It would be better to have tracked my progress and saved multiple versions in case something went wrtong and I wanted to go back to older versions.
+# dashboard-secret-api-keys
