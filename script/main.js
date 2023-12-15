@@ -213,10 +213,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // hämtar dagens datum från Date objektet
     const today = new Date();
 
-    // hämtar morgondagens datum genom att lägga till 1 dag
-    const tomorrow = new Date(today);
-    tomorrow.setDate(today.getDate() + 1);
-
     // hämtar dagen därpås datum genom att lägga till 2 dagar
     const dayAfterTomorrow = new Date(today);
     dayAfterTomorrow.setDate(today.getDate() + 2);
@@ -225,8 +221,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
     //sparar datumet i variabler 
-    const todayName = daysOfWeek[today.getDay()];
-    const tomorrowName = daysOfWeek[tomorrow.getDay()];
     const dayAfterTomorrowName = daysOfWeek[dayAfterTomorrow.getDay()];
 
     //hämtar lat + long från getLocation (geolocation) där functionen anropas
@@ -256,11 +250,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 // ger resultatet --> tre dagars prognos
                 const weatherHTML = `
                     <div class="weather-days">
-                        <h4> ${todayName} </h4>${formatWeather(today)}
+                        <h4> Today </h4>${formatWeather(today)}
                     </div>
                     
                     <div class="weather-days">
-                        <h4> ${tomorrowName} </h4>${formatWeather(tomorrow)}
+                        <h4> Tomorrow </h4>${formatWeather(tomorrow)}
                     </div>
                     
                     <div class="weather-days">
@@ -315,10 +309,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 //skapar innehåll för tre dagars prognos
                 const weatherHTML = `
                     <div class="weather-days">
-                        <h3> ${todayName} </h3>${formatWeather(today)}
+                        <h3> Today </h3>${formatWeather(today)}
                     </div>
                     <div class="weather-days">
-                        <h3> ${tomorrowName} </h3>${formatWeather(tomorrow)}
+                        <h3> Tomorrow </h3>${formatWeather(tomorrow)}
                     </div>
                     <div class="weather-days">
                         <h3> ${dayAfterTomorrowName} </h3>${formatWeather(dayAfterTomorrow)}
