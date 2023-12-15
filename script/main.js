@@ -353,31 +353,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     //händelse för locationInput när användaren trycker 'enter'
-    locationInput.addEventListener('input', function(event) {
-        const isEnterKey = event.inputType === 'insertLineBreak' || event.key === 'Enter';
-    
-        if (isEnterKey) {
-            updateWeather();
-            locationInput.value = '';
-            locationInput.blur();
-        }
-    });
-    
-    // Optionally, you can still keep the handleEnterKey function if needed
     function handleEnterKey(event) {
-        if (event.key === 'Enter') {
+        if (event.keyCode === 13 || event.key === "Enter") {
             updateWeather();
             locationInput.value = '';
             locationInput.blur();
         }
     }
     
-    // Add the keydown event listener
+
     locationInput.addEventListener('keydown', handleEnterKey);
-    
-    // Assuming you have a function called getLocation() elsewhere in your code
+
+    //current location uppdaterar weatherCard när sidan laddas --> skapar innehåll från start
     getLocation();
-    
 });
 
 // 5. Denna del får du fritt bestämma vad den ska innehålla. Det ska dock vara data från ett externt API och exempelvis kan det vara senaste nyheterna eller aktiekurser.
